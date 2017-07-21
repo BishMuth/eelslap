@@ -3,21 +3,50 @@
 <head>
 <style>
 * {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-overflow-x: hidden;
-display: flex;
+  display: flex;
+  background: black;
 }
+
 img {
-display: block;
-height: 100vh;
-width: auto;
-overflow: hidden;
-margin-left: 50%;
-transform: translateX(-50%);
+  position: absolute;
 }
+
+body {
+  overflow-y: hidden;
+}
+
+img {
+  display: block;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+@media (min-aspect-ratio: 4/3) {
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  height: 100vh;
+  width: auto;
+  overflow: hidden;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+}
+
 </style>
 </head>
 <body>
